@@ -3,8 +3,8 @@
 
 // creo una classe user con le info obbligatorie per un user
 class User {
-    public $name;
-    public $lastname;
+    protected $name;
+    protected $lastname;
     protected $age;
     public $email;
 
@@ -19,6 +19,10 @@ class User {
 
     public function getAge() {
         return $this->age;
+    }
+
+    public function getName() {
+        return $this->name;
     }
 };
 

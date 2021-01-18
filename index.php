@@ -1,11 +1,35 @@
 <?php
-echo 'hello';
+// echo 'hello';
 echo '<br>';
 
-require 'User.php';
+require_once 'User.php';
+require_once 'user_optional_info.php';
 
-$userOne = new User ('Mario', 'Rossi');
-$userOne->setAge(50);
-echo $userOne->getAge();
+echo "<strong>Utente 'base'</strong> ";
+echo '<br>';
+$userBaseOne = new User ('Mario', 'Rossi');
+echo 'Nome : ' . $userBaseOne->getName();
+echo '<br>';
+$userBaseOne->setAge(50);
+echo 'Anni : ' . $userBaseOne->getAge();
+echo '<br>';
+echo '<br>';
+
+
+echo "<strong> Utente 'advanced' </strong>";
+echo '<br>';
+$userAdvOne = new UserAdvanced ('Pippo', 'Bianchi');
+echo 'Nome : ' . $userAdvOne->getName();
+echo '<br>';
+$userAdvOne->setAge(35);
+echo 'Anni : ' . $userAdvOne->getAge();
+echo '<br>';
+$userAdvOne->setCity('Milano');
+echo 'Città : ' . $userAdvOne->getCity();
+echo '<br>';
+$userAdvOne->setJob('Actor');
+echo 'Lavoro : ' . $userAdvOne->getJob();
+echo '<br>';
+
 
 ?>
