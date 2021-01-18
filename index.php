@@ -13,6 +13,9 @@ echo '<br>';
 $userBaseOne->setAge(50);
 echo 'Anni : ' . $userBaseOne->getAge();
 echo '<br>';
+$userBaseOne->setPoint(10);
+echo 'Punti per blog : ' . $userBaseOne->getPoint();
+echo '<br>';
 echo '<br>';
 
 
@@ -29,6 +32,9 @@ echo 'Città : ' . $userAdvOne->getCity();
 echo '<br>';
 $userAdvOne->setJob('Actor');
 echo 'Lavoro : ' . $userAdvOne->getJob();
+echo '<br>';
+$userAdvOne->setPoint(10);
+echo 'Punti per blog : ' . $userAdvOne->getPoint();
 echo '<br>';
 
 

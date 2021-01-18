@@ -34,6 +34,11 @@ class UserAdvanced extends User {
         return $this->blogsFollowed;
     }
 
+// sovrascrivo la funzione della classe padre per dare più "punti blog" agli utenti advanced che ci forniscono più dati 
+    public function setPoint($_pointPerBlog) {
+        $this->pointPerBlog = $_pointPerBlog * 4;
+    }
+
 
 };
 
