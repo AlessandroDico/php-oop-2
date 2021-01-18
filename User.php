@@ -15,7 +15,12 @@ class User {
     }
 
     public function setAge($_age) {
-        $this->age = $_age;
+        if (is_int($_age) && $_age > 0 && $_age < 120) {
+            $this->age = $_age;
+        } else {
+            throw new Exception ("Età inserita non valida");
+
+        }
     }
 
     public function getAge() {
