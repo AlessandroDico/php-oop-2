@@ -8,8 +8,15 @@ require_once 'UserAdvanced.php';
 // utente "base"
 echo "<strong>Utente 'base'</strong> ";
 echo '<br>';
-$userBaseOne = new User ('Mario', 'Rossi');
-echo 'Nome : ' . $userBaseOne->getName();
+
+try {
+    $userBaseOne = new User ('M', 'Rossi');
+    echo 'Nome : ' . $userBaseOne->getName();
+} catch (Exception $e) {
+    echo 'ERRORE : ' . $e->getMessage();
+}
+
+
 echo '<br>';
 
 // stampo messaggio di errore se l'età non è corretta con try e chatch
@@ -52,6 +59,4 @@ echo '<br>';
 $userAdvOne->setPoint(10);
 echo 'Punti per blog : ' . $userAdvOne->getPoint();
 echo '<br>';
-
-
 ?>

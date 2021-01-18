@@ -10,7 +10,13 @@ class User {
     protected $pointPerBlog;
 
     public function __construct($_name, $_lastname) {
-        $this->name = $_name;
+
+        if (!is_numeric($_name) && strlen($_name) > 2) {
+            $this->name = $_name;
+        } else {
+            throw new Exception ('Nome non valido');
+        }
+
         $this->lastname = $_lastname;
     }
 
@@ -19,7 +25,6 @@ class User {
             $this->age = $_age;
         } else {
             throw new Exception ("Età inserita non valida");
-
         }
     }
 
