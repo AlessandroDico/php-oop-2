@@ -14,10 +14,15 @@ class User {
         if (!is_numeric($_name) && strlen($_name) > 2) {
             $this->name = $_name;
         } else {
-            throw new Exception ('Nome non valido');
+            throw new Exception ('Elementi User non validi');
         }
 
-        $this->lastname = $_lastname;
+        if (!is_numeric($_name) && strlen($_name) > 1) {
+            $this->lastname = $_lastname;
+        } else {
+            throw new Exception ('Elementi User non validi');
+        }
+
     }
 
     public function setAge($_age) {
@@ -34,6 +39,10 @@ class User {
 
     public function getName() {
         return $this->name;
+    }
+
+    public function getLastname() {
+        return $this->lastname;
     }
 
     public function setPoint($_pointPerBlog) {
