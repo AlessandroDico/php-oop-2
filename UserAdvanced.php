@@ -1,7 +1,7 @@
 <?php
 
 require_once 'User.php';
-require_once 'TraitPost.php';
+require_once 'PostTrait.php';
 
 // creo una classe user "avanzato" con più specifiche
 class UserAdvanced extends User {

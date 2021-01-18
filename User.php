@@ -1,6 +1,6 @@
 <?php
 // echo 'hello';
-require_once 'TraitPost.php';
+require_once 'PostTrait.php';
 
 // creo una classe user con le info obbligatorie per un user
 class User {
