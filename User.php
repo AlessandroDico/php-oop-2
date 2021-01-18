@@ -1,8 +1,12 @@
 <?php
 // echo 'hello';
+require_once 'TraitPost.php';
 
 // creo una classe user con le info obbligatorie per un user
 class User {
+
+    use Post;
+
     protected $name;
     protected $lastname;
     protected $age;

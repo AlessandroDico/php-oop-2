@@ -4,6 +4,7 @@ echo '<br>';
 
 require_once 'User.php';
 require_once 'UserAdvanced.php';
+require_once 'TraitPost.php';
 
 // utente "base"
 echo "<strong>Utente 'base'</strong> ";
@@ -27,6 +28,13 @@ try {
     echo '<br>';
     $userBaseOne->setPoint(10);
     echo 'Punti per blog : ' . $userBaseOne->getPoint();
+    echo '<br>';
+    $userBaseOne->setWeeklyPosts(1);
+    echo 'Blog settimanali : ' . $userBaseOne->getWeeklyPosts();
+    echo '<br>';
+    $userBaseOne->setViews(50);
+    echo 'Visualizzazioni per blog : ' . $userBaseOne->getViews();
+    echo '<br>';
 
 } catch (Exception $e) {
     echo 'ERRORE : ' . $e->getMessage();
@@ -62,6 +70,12 @@ try {
     echo '<br>';
     $userAdvOne->setPoint(10);
     echo 'Punti per blog : ' . $userAdvOne->getPoint();
+    echo '<br>';
+    $userAdvOne->setWeeklyPosts(2);
+    echo 'Blog settimanali : ' . $userAdvOne->getWeeklyPosts();
+    echo '<br>';
+    $userAdvOne->setViews(100);
+    echo 'Visualizzazioni per blog : ' . $userAdvOne->getViews();
     echo '<br>';
 
 } catch (Exception $e) {

@@ -1,9 +1,13 @@
 <?php
 
 require_once 'User.php';
+require_once 'TraitPost.php';
 
 // creo una classe user "avanzato" con più specifiche
 class UserAdvanced extends User {
+
+    use Post;
+
     private $city;
     private $job;
     private $blogsFollowed;
@@ -34,7 +38,7 @@ class UserAdvanced extends User {
         return $this->blogsFollowed;
     }
 
-// sovrascrivo la funzione della classe padre per dare più "punti blog" agli utenti advanced che ci forniscono più dati 
+// sovrascrivo la funzione della classe padre per dare più "punti blog" agli utenti advanced che ci forniscono più dati
     public function setPoint($_pointPerBlog) {
         $this->pointPerBlog = $_pointPerBlog * 4;
     }
